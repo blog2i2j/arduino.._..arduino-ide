@@ -24,6 +24,10 @@ import {
 } from '@theia/core/lib/common/i18n/localization';
 import SettingsStepInput from './settings-step-input';
 import { InterfaceScale } from '../../contributions/interface-scale';
+import {
+  userConfigurableThemes,
+  themeLabelForSettings,
+} from '../../theia/core/theming';
 
 const maxScale = InterfaceScale.ZoomLevel.toPercentage(
   InterfaceScale.ZoomLevel.MAX
@@ -218,11 +222,11 @@ export class SettingsComponent extends React.Component<
             <div className="flex-line">
               <select
                 className="theia-select"
-                value={this.props.themeService.getCurrentTheme().label}
+                value={this.currentThemeLabel}
                 onChange={this.themeDidChange}
               >
-                {this.props.themeService.getThemes().map(({ id, label }) => (
-                  <option key={id} value={label}>
+                {this.themeSelectOptions.map(({ key, label }) => (
+                  <option key={key} value={label}>
                     {label}
                   </option>
                 ))}
@@ -331,6 +335,18 @@ export class SettingsComponent extends React.Component<
         </div>
       </div>
     );
+  }
+
+  private get currentThemeLabel(): string {
+    const currentTheme = this.props.themeService.getCurrentTheme();
+    return themeLabelForSettings(currentTheme);
+  }
+
+  private get themeSelectOptions(): { key: string; label: string }[] {
+    return userConfigurableThemes(this.props.themeService).map((theme) => ({
+      key: theme.id,
+      label: themeLabelForSettings(theme),
+    }));
   }
 
   private toSelectOptions(language: string | LanguageInfo): JSX.Element {
@@ -610,7 +626,9 @@ export class SettingsComponent extends React.Component<
     event: React.ChangeEvent<HTMLSelectElement>
   ): void => {
     const { selectedIndex } = event.target.options;
-    const theme = this.props.themeService.getThemes()[selectedIndex];
+    const theme = userConfigurableThemes(this.props.themeService)[
+      selectedIndex
+    ];
     if (theme) {
       this.setState({ themeId: theme.id });
       if (this.props.themeService.getCurrentTheme().id !== theme.id) {
