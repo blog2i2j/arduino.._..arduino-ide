@@ -190,12 +190,10 @@ export function monitorConnectionStatusEquals(
   left: MonitorConnectionStatus,
   right: MonitorConnectionStatus
 ): boolean {
-  if (typeof left === 'string') {
-    return typeof right === 'string' ? left === right : false;
+  if (typeof left === 'object' && typeof right === 'object') {
+    return left.errorMessage === right.errorMessage;
   }
-  return typeof right === 'object'
-    ? right.errorMessage === left.errorMessage
-    : false;
+  return left === right;
 }
 
 /**
