@@ -4,6 +4,12 @@
       "detail": "Version: {0}\nDate: {1}{2}\nCLI Version: {3}\n\n{4}",
       "label": "درباره {0}"
     },
+    "account": {
+      "goToCloudEditor": "Go to Cloud Editor",
+      "goToIoTCloud": "Go to IoT Cloud",
+      "goToProfile": "Go to Profile",
+      "menuTitle": "Arduino Cloud"
+    },
     "board": {
       "board": "بورد {0}",
       "boardConfigDialogTitle": "انتخاب یک بورد و پورت دیگر",
@@ -83,13 +89,12 @@
       "mouseError": "\"موس\" پیدا نشد. آیا طرح شما شامل خط \"#include <Mouse.h>\" است؟"
     },
     "cloud": {
-      "account": "حساب کاربری",
       "chooseSketchVisibility": "قابلیت مشاهده طرح خود را انتخاب کنید:",
       "cloudSketchbook": "منبع ابری طرح ها",
       "connected": "متصل",
       "continue": "ادامه",
-      "donePulling": "پایان دریافت {0}",
-      "donePushing": "پایان ارسال {0}",
+      "donePulling": "Done pulling '{0}'.",
+      "donePushing": "Done pushing '{0}'.",
       "embed": "قرار دادن:",
       "emptySketchbook": "طرح شما خالی است",
       "goToCloud": "به فضای ابری بروید",
@@ -155,18 +160,27 @@
     "component": {
       "boardsIncluded": "بردهای موجود در این بسته :",
       "by": "توسط",
+      "clickToOpen": "Click to open in browser: {0}",
       "filterSearch": "محدود کردن جستجوی شما ...",
       "install": "نصب",
-      "installed": "نصب شده است",
+      "installLatest": "Install Latest",
+      "installVersion": "Install {0}",
+      "installed": "{0} installed",
       "moreInfo": "اطلاعات بیشتر",
+      "otherVersions": "Other Versions",
+      "remove": "حذف",
+      "title": "{0} by {1}",
       "uninstall": "لغو نصب",
       "uninstallMsg": "آیا شما می خواهید {0} را لغو نصب کنید؟",
-      "version": "ورژن {0}"
+      "update": "Update"
     },
     "configuration": {
       "cli": {
         "inaccessibleDirectory": "Could not access the sketchbook location at '{0}': {1}"
       }
+    },
+    "connectionStatus": {
+      "connectionLost": "Connection lost. Cloud sketch actions and updates won't be available."
     },
     "contributions": {
       "addFile": "فایل اظافه کن",
@@ -188,6 +202,7 @@
       "copyError": "کپی پیام های خطا",
       "noBoardSelected": "هیچ بردی انتخاب نشده است. لطفاً برد آردوینو خود را از منوی Tools > Board انتخاب کنید"
     },
+    "createCloudCopy": "Push Sketch to Cloud",
     "daemon": {
       "restart": "راه اندازی مجدد Daemon",
       "start": "شروع Daemon",
@@ -414,11 +429,11 @@
       "editInvalidSketchFolderLocationQuestion": "Do you want to try saving the sketch to a different location?",
       "editInvalidSketchFolderQuestion": "Do you want to try saving the sketch with a different name?",
       "exportBinary": "دریافت خروجی باینری کامپایل شده",
-      "invalidCloudSketchName": "The name must start with a letter or number, followed by letters, numbers, dashes, dots and underscores. Maximum length is 36 characters.",
+      "invalidCloudSketchName": "The name must start with a letter, number, or underscore, followed by letters, numbers, dashes, dots and underscores. Maximum length is 36 characters.",
       "invalidSketchFolderLocationDetails": "You cannot save a sketch into a folder inside itself.",
       "invalidSketchFolderLocationMessage": "Invalid sketch folder location: '{0}'",
       "invalidSketchFolderNameMessage": "Invalid sketch folder name: '{0}'",
-      "invalidSketchName": "The name must start with a letter or number, followed by letters, numbers, dashes, dots and underscores. Maximum length is 63 characters.",
+      "invalidSketchName": "The name must start with a letter, number, or underscore, followed by letters, numbers, dashes, dots and underscores. Maximum length is 63 characters.",
       "moving": "جابجا کردن",
       "movingMsg": "فایل \"{0}\" باید داخل یک پوشه طرح به نام \"{1}\" باشد.\nاین پوشه را ایجاد کنید، فایل را منتقل کنید و ادامه دهید؟",
       "new": "New Sketch",
@@ -450,6 +465,9 @@
       "answerSurvey": "به نظرسنجی پاسخ دهید",
       "dismissSurvey": "دیگر نشان نده",
       "surveyMessage": "لطفاً با پاسخ دادن به این نظرسنجی فوق العاده کوتاه ما را در پیشرفت خود یاری کنید. ما برای جامعه خود ارزش قائلیم و دوست داریم حامیان خود را کمی بهتر بشناسیم."
+    },
+    "title": {
+      "cloud": "Cloud"
     },
     "updateIndexes": {
       "updateIndexes": "به روز رسانی شاخص ها",
@@ -483,6 +501,7 @@
       "couldNotSave": "ابر طرح را ذخیره نکرد. لطفا کار ذخیره نشده خود را به ویرایشگر متن مورد علاقه خود کپی کنید، و آردوینو را دوباره راه اندازی کنید.",
       "daemonOffline": "CLI آفلاین پس زمینه",
       "offline": "آفلاین",
+      "offlineText": "آفلاین",
       "quitTitle": "آیا مطمئن هستید که می خواهید خارج شوید؟"
     },
     "editor": {

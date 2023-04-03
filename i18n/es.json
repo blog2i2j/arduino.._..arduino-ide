@@ -4,6 +4,12 @@
       "detail": "Version: {0}\nDate: {1}{2}\nCLI Version: {3}\n\n{4}",
       "label": "Acerca de {0}"
     },
+    "account": {
+      "goToCloudEditor": "Go to Cloud Editor",
+      "goToIoTCloud": "Go to IoT Cloud",
+      "goToProfile": "Go to Profile",
+      "menuTitle": "Arduino Cloud"
+    },
     "board": {
       "board": "Placa{0}",
       "boardConfigDialogTitle": "Seleccionar Otra Placa y Puerto",
@@ -83,13 +89,12 @@
       "mouseError": "'Mouse' no encontrado. ¿Tiene tu proyecto incluida la linea '#include <Mouse.h>'?"
     },
     "cloud": {
-      "account": "Cuenta",
       "chooseSketchVisibility": "Elige la visibilidad de tu Sketch:",
       "cloudSketchbook": "Libro de bocetos en la nube",
       "connected": "Conectado",
       "continue": "Continuar",
-      "donePulling": "Extracción de '{0}' realizada.",
-      "donePushing": "Envío a '{0}' realizado.",
+      "donePulling": "Done pulling '{0}'.",
+      "donePushing": "Done pushing '{0}'.",
       "embed": "Incrustado:",
       "emptySketchbook": "Tu Sketchbook está vacío",
       "goToCloud": "Ir al Cloud",
@@ -155,18 +160,27 @@
     "component": {
       "boardsIncluded": "Placas incluidas en este paquete:",
       "by": "de",
+      "clickToOpen": "Click to open in browser: {0}",
       "filterSearch": "Filtre su búsqueda...",
       "install": "Instalar",
-      "installed": "Instalado",
+      "installLatest": "Install Latest",
+      "installVersion": "Install {0}",
+      "installed": "{0} installed",
       "moreInfo": "Más información",
+      "otherVersions": "Other Versions",
+      "remove": "Eliminar",
+      "title": "{0} by {1}",
       "uninstall": "Desinstalar",
       "uninstallMsg": "¿Quieres desinstalar {0}?",
-      "version": "Versión {0}"
+      "update": "Update"
     },
     "configuration": {
       "cli": {
         "inaccessibleDirectory": "Could not access the sketchbook location at '{0}': {1}"
       }
+    },
+    "connectionStatus": {
+      "connectionLost": "Connection lost. Cloud sketch actions and updates won't be available."
     },
     "contributions": {
       "addFile": "Añadir fichero...",
@@ -188,6 +202,7 @@
       "copyError": "Copiar mensajes de error",
       "noBoardSelected": "Ninguna placa seleccionada. Por favor selecciona una placa Arduino en el menú Herramientas > Placas"
     },
+    "createCloudCopy": "Push Sketch to Cloud",
     "daemon": {
       "restart": "Reiniciar Daemon",
       "start": "Iniciar Daemon",
@@ -414,11 +429,11 @@
       "editInvalidSketchFolderLocationQuestion": "Do you want to try saving the sketch to a different location?",
       "editInvalidSketchFolderQuestion": "Do you want to try saving the sketch with a different name?",
       "exportBinary": "Exportar binario compilado",
-      "invalidCloudSketchName": "The name must start with a letter or number, followed by letters, numbers, dashes, dots and underscores. Maximum length is 36 characters.",
+      "invalidCloudSketchName": "The name must start with a letter, number, or underscore, followed by letters, numbers, dashes, dots and underscores. Maximum length is 36 characters.",
       "invalidSketchFolderLocationDetails": "You cannot save a sketch into a folder inside itself.",
       "invalidSketchFolderLocationMessage": "Invalid sketch folder location: '{0}'",
       "invalidSketchFolderNameMessage": "Invalid sketch folder name: '{0}'",
-      "invalidSketchName": "The name must start with a letter or number, followed by letters, numbers, dashes, dots and underscores. Maximum length is 63 characters.",
+      "invalidSketchName": "The name must start with a letter, number, or underscore, followed by letters, numbers, dashes, dots and underscores. Maximum length is 63 characters.",
       "moving": "Moviendo",
       "movingMsg": "El archivo \"{0}\" tiene que estar dentro de una carpeta de bocetos llamada \"{1}\".\n¿Crear esta carpeta, mover el archivo y continuar?",
       "new": "New Sketch",
@@ -450,6 +465,9 @@
       "answerSurvey": "Completar encuesta",
       "dismissSurvey": "No volver a mostrar",
       "surveyMessage": "Por favor ayudenos mejorar completando esta breve encuesta. Valoramos nuestra comunidad y nos gustaría conocer algo mejor a los que nos apoyan."
+    },
+    "title": {
+      "cloud": "Cloud"
     },
     "updateIndexes": {
       "updateIndexes": "Actualizar indices",
@@ -483,6 +501,7 @@
       "couldNotSave": "No se ha podido guardar el sketch. Por favor, copia tu trabajo no guardado en tu editor de texto favorito y reinicia el IDE.",
       "daemonOffline": "Demonio del CLI fuera de línea",
       "offline": "Desconectado",
+      "offlineText": "Desconectado",
       "quitTitle": "Seguro que quiere salir ?"
     },
     "editor": {
