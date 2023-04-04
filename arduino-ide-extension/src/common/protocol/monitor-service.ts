@@ -79,16 +79,16 @@ export const MonitorErrorCodes = {
   MissingConfiguration: 6004,
 } as const;
 
-export const ConnectionFailedError = createMonitorError(
+export const ConnectionFailedError = declareMonitorError(
   MonitorErrorCodes.ConnectionFailed
 );
-export const NotConnectedError = createMonitorError(
+export const NotConnectedError = declareMonitorError(
   MonitorErrorCodes.NotConnected
 );
-export const AlreadyConnectedError = createMonitorError(
+export const AlreadyConnectedError = declareMonitorError(
   MonitorErrorCodes.AlreadyConnected
 );
-export const MissingConfigurationError = createMonitorError(
+export const MissingConfigurationError = declareMonitorError(
   MonitorErrorCodes.MissingConfiguration
 );
 
@@ -167,7 +167,7 @@ interface PortDescriptor {
   readonly protocol: string;
   readonly address: string;
 }
-function createMonitorError(
+function declareMonitorError(
   code: number
 ): ApplicationError.Constructor<number, PortDescriptor> {
   return ApplicationError.declare(
